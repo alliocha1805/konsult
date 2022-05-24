@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="style_dashboard.css" />
+  <title>Consult.io</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Menu Lateral --> 
+      <div class="col-2" id="menu_lateral">
+        <img src="" class="rounded mx-auto d-block" alt="Logo"/>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><i class="bi bi-archive"></i> Consultants</li>
+          <li class="list-group-item"><i class="bi bi-watch"></i> Clients</li>
+          <li class="list-group-item"><i class="bi bi-unlock-fill"></i> Compétences</li>
+        </ul>
+      </div>
+      <!-- Bloc principal --> 
+      <div class="col-10" id="bloc_contenu">
+        <!-- Menu haut contenu --> 
+        <nav class="navbar sticky-top navbar-light bg-light">
+          <button type="button" class="btn btn-secondary" onclick="hideMenu()"><i class="bi bi-menu-button-wide"></i></button>
+          <li class="nav-item dropdown" style="list-style: none;">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="https://cours-informatique-gratuit.fr/wp-content/uploads/2017/10/avatar.png" class="rounded" width="32px" height="32px"></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </nav>
+        <!--<div class="row m-2" id="menu_haut">
+          <div class="col-sm-4"><button type="button" class="btn btn-secondary" onclick="hideMenu()"><i class="bi bi-menu-button-wide"></i></button></div>
+          <div class="col-sm-8">
+            <div class="dropdown float-end">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-square"></i>
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+            </div>
+          </div>
+        </div> --> 
+        <!-- Bloc contenu --> 
+        <div class="row g-4 m-1">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row g-4 m-1">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 m-1">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function hideMenu() {
+      var x = document.getElementById("menu_lateral");
+      var y = document.getElementById("bloc_contenu");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        y.className = "col-10"
+      } else {
+        x.style.display = "none";
+        y.className = "col-12"
+      }
+    }
+    </script>
+</body>
+</html>
