@@ -8,53 +8,46 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link rel="stylesheet" type="text/css" href="style_dashboard.css" />
-  <title>Consult.io</title>
+  <title>Konsult.io</title>
 </head>
 <body>
   <div class="container-fluid">
     <div class="row">
       <!-- Menu Lateral --> 
-      <div class="col-2" id="menu_lateral">
-        <img src="" class="rounded mx-auto d-block" alt="Logo"/>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><i class="bi bi-archive"></i> Consultants</li>
-          <li class="list-group-item"><i class="bi bi-watch"></i> Clients</li>
-          <li class="list-group-item"><i class="bi bi-unlock-fill"></i> Compétences</li>
-        </ul>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <img src="logo-konsult.PNG" class="rounded mx-auto d-block img-fluid" alt="Logo"/>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="bi bi-archive"></i> Consultants</li>
+            <li class="list-group-item"><i class="bi bi-watch"></i> Clients</li>
+            <li class="list-group-item"><i class="bi bi-unlock-fill"></i> Compétences</li>
+            </ul>
+        </div>
       </div>
       <!-- Bloc principal --> 
-      <div class="col-10" id="bloc_contenu">
+      <div class="col-12" id="bloc_contenu">
         <!-- Menu haut contenu --> 
         <nav class="navbar sticky-top navbar-light bg-light">
-          <button type="button" class="btn btn-secondary" onclick="hideMenu()"><i class="bi bi-menu-button-wide"></i></button>
-          <li class="nav-item dropdown" style="list-style: none;">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="https://cours-informatique-gratuit.fr/wp-content/uploads/2017/10/avatar.png" class="rounded" width="32px" height="32px"></a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="bi bi-list"></i></button>
+          <li class="nav-item dropdown" style="list-style: none; border-left: 1px black;">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+              <span>Alexis PILOY</span>
+              <img src="https://cours-informatique-gratuit.fr/wp-content/uploads/2017/10/avatar.png" class="rounded" width="32px" height="32px">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill"></i> Profil</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i> Deconnexion</a></li>
             </ul>
           </li>
         </nav>
-        <!--<div class="row m-2" id="menu_haut">
-          <div class="col-sm-4"><button type="button" class="btn btn-secondary" onclick="hideMenu()"><i class="bi bi-menu-button-wide"></i></button></div>
-          <div class="col-sm-8">
-            <div class="dropdown float-end">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-person-square"></i>
-            </a>
-          
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-            </div>
-          </div>
-        </div> --> 
         <!-- Bloc contenu --> 
+        <!-- 3 CARD ROW-->
         <div class="row g-4 m-1">
             <div class="col-sm-4">
               <div class="card">
@@ -84,6 +77,7 @@
               </div>
             </div>
         </div>
+        <!-- 2 CARD ROW-->
         <div class="row g-4 m-1">
           <div class="col-sm-6">
             <div class="card">
@@ -104,12 +98,33 @@
             </div>
           </div>
         </div>
+        <!--1 CARD ROW-->
         <div class="row g-4 m-1">
           <div class="col-sm-12">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional content.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis nibh turpis, nec suscipit felis consequat eget. Phasellus vitae mi aliquet, faucibus ipsum at, sagittis dolor. Aliquam justo lorem, blandit id orci eu, sagittis congue felis. In nec vestibulum erat, id venenatis velit. Donec maximus, leo sed pretium sagittis, dolor arcu semper libero, sed ultrices nisl ipsum nec nulla. Cras placerat enim sit amet nisl mattis mattis. Mauris laoreet mollis fringilla. Nullam quis vehicula dui. Vivamus elementum nisl eu nunc condimentum, et interdum ipsum sagittis. Integer cursus tristique auctor. Mauris et tincidunt metus. Quisque aliquam feugiat ligula in finibus. Nulla ut diam quis risus eleifend luctus in non nisl.
+                  Curabitur tempor lacus lacus, ac egestas lectus accumsan quis. Praesent sodales volutpat tincidunt. Fusce pharetra dignissim dolor. Vestibulum at justo tincidunt, venenatis neque quis, vehicula augue. Duis at eros eget ligula sagittis ornare. Mauris ipsum massa, dapibus in urna at, volutpat dapibus orci. Ut viverra risus non quam efficitur sollicitudin. Vestibulum suscipit ligula a ante sollicitudin, a blandit metus vestibulum. Sed fermentum augue eu elit aliquet, sit amet accumsan ex placerat. Pellentesque vehicula accumsan ultricies.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--1 CARD ROW-->
+        <div class="row g-4 m-1">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional content.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis nibh turpis, nec suscipit felis consequat eget. Phasellus vitae mi aliquet, faucibus ipsum at, sagittis dolor. Aliquam justo lorem, blandit id orci eu, sagittis congue felis. In nec vestibulum erat, id venenatis velit. Donec maximus, leo sed pretium sagittis, dolor arcu semper libero, sed ultrices nisl ipsum nec nulla. Cras placerat enim sit amet nisl mattis mattis. Mauris laoreet mollis fringilla. Nullam quis vehicula dui. Vivamus elementum nisl eu nunc condimentum, et interdum ipsum sagittis. Integer cursus tristique auctor. Mauris et tincidunt metus. Quisque aliquam feugiat ligula in finibus. Nulla ut diam quis risus eleifend luctus in non nisl.
+                  Curabitur tempor lacus lacus, ac egestas lectus accumsan quis. Praesent sodales volutpat tincidunt. Fusce pharetra dignissim dolor. Vestibulum at justo tincidunt, venenatis neque quis, vehicula augue. Duis at eros eget ligula sagittis ornare. Mauris ipsum massa, dapibus in urna at, volutpat dapibus orci. Ut viverra risus non quam efficitur sollicitudin. Vestibulum suscipit ligula a ante sollicitudin, a blandit metus vestibulum. Sed fermentum augue eu elit aliquet, sit amet accumsan ex placerat. Pellentesque vehicula accumsan ultricies.
+                </p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
