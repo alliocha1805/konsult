@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="style_dashboard.css" />
+  <title>Konsult.io</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Menu Lateral --> 
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <img src="logo-konsult.PNG" class="rounded mx-auto d-block img-fluid" alt="Logo"/>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="bi bi-archive"></i> Consultants</li>
+            <li class="list-group-item"><i class="bi bi-watch"></i> Clients</li>
+            <li class="list-group-item"><i class="bi bi-unlock-fill"></i> Compétences</li>
+            </ul>
+        </div>
+      </div>
+      <!-- Bloc principal --> 
+      <div class="col-12" id="bloc_contenu">
+        <!-- Menu haut contenu --> 
+        <nav class="navbar sticky-top navbar-light bg-light">
+          <button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="bi bi-list"></i></button>
+          <li class="nav-item dropdown" style="list-style: none; border-left: 1px black;">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+              <span>Alexis PILOY</span>
+              <img src="https://cours-informatique-gratuit.fr/wp-content/uploads/2017/10/avatar.png" class="rounded" width="32px" height="32px">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill"></i> Profil</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill"></i> Parametres</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-credit-card"></i> Abonnement</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i> Deconnexion</a></li>
+            </ul>
+          </li>
+        </nav>
+        <!-- Bloc contenu --> 
+        <!-- 4 CARD ROW-->
+        <div class="row g-4 m-1">
+          <div class="col-sm-6 col-md-6 col-xl-3">
+            <div class="card text-center">
+              <h3 class="card-header">Consultants Actifs<i class="bi bi-person-fill" style="align-self: right;"></i></h2>
+              <div class="card-body">
+                <p class="card-text" style="font-size: 32px;">5</p>
+                <a href="#" class="btn btn-primary">Liste des consultants Actifs</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-xl-3">
+            <div class="card text-center">
+              <h3 class="card-header">Consultants Interco<i class="bi bi-person-fill" style="align-self: right;"></i></h2>
+              <div class="card-body">
+                <p class="card-text" style="font-size: 32px;">2</p>
+                <a href="#" class="btn btn-primary">Liste des consultants inactifs</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-xl-3">
+            <div class="card text-center">
+              <h3 class="card-header">Clients Actifs <i class="bi bi-briefcase-fill" style="align-self: right;"></i></h2>
+              <div class="card-body">
+                <p class="card-text" style="font-size: 32px;">3</p>
+                <a href="#" class="btn btn-primary">Liste des clients Actifs</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-xl-3">
+            <div class="card text-center">
+              <h3 class="card-header">Clients Inactifs <i class="bi bi-briefcase-fill" style="align-self: right;"></i></h2>
+              <div class="card-body">
+                <p class="card-text" style="font-size: 32px;">12</p>
+                <a href="#" class="btn btn-primary">Liste des Clients Inactifs</a>
+              </div>
+            </div>
+          </div>
+      </div>
+        <div class="row g-4 m-1">
+          <div class="col-sm-8">
+            <div class="card text-center">
+              <h3 class="card-header">Chiffre d'affaire <i class="bi bi-cash-coin"></i></h2>
+              <div class="card-body">
+                <div>
+                  <canvas id="myChart" style="height:25px;"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="col-sm-4">
+              <div class="card text-center">
+                <h3 class="card-header">Activités récentes <i class="bi bi-activity"></i></h2>
+                <div class="card-body">
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!--1 CARD ROW-->
+        <div class="row g-4 m-1">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Chiffre d'affaire</h5>
+                <div>
+                  <canvas id="myChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--1 CARD ROW-->
+        <div class="row g-4 m-1">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Activités récentes</h5>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional content.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis nibh turpis, nec suscipit felis consequat eget. Phasellus vitae mi aliquet, faucibus ipsum at, sagittis dolor. Aliquam justo lorem, blandit id orci eu, sagittis congue felis. In nec vestibulum erat, id venenatis velit. Donec maximus, leo sed pretium sagittis, dolor arcu semper libero, sed ultrices nisl ipsum nec nulla. Cras placerat enim sit amet nisl mattis mattis. Mauris laoreet mollis fringilla. Nullam quis vehicula dui. Vivamus elementum nisl eu nunc condimentum, et interdum ipsum sagittis. Integer cursus tristique auctor. Mauris et tincidunt metus. Quisque aliquam feugiat ligula in finibus. Nulla ut diam quis risus eleifend luctus in non nisl.
+                  Curabitur tempor lacus lacus, ac egestas lectus accumsan quis. Praesent sodales volutpat tincidunt. Fusce pharetra dignissim dolor. Vestibulum at justo tincidunt, venenatis neque quis, vehicula augue. Duis at eros eget ligula sagittis ornare. Mauris ipsum massa, dapibus in urna at, volutpat dapibus orci. Ut viverra risus non quam efficitur sollicitudin. Vestibulum suscipit ligula a ante sollicitudin, a blandit metus vestibulum. Sed fermentum augue eu elit aliquet, sit amet accumsan ex placerat. Pellentesque vehicula accumsan ultricies.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12" id="footer" style="background-color: lightgray; padding: none;">
+        <p>test</p>
+      </div>
+    </div>
+  </div>
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "line",
+        options:{
+          responsive:true,
+        },
+        data: {
+          labels: [
+            "Janvier",
+            "Février",
+            "Mars",
+            "Avril",
+            "Mai",
+            "Juin",
+            "Juillet",
+          ],
+          datasets: [
+            {
+              label: "Chiffre d'affaire",
+              data: [150000, 150000, 160000, 120000, 100000, 250000, 150000],
+              backgroundColor: "rgb(0, 147, 178)",
+              borderColor : "rgba(0,0,0,0.6)",
+              tension: 0.1,
+              fill: true,
+            },
+          ],
+        },
+      });
+    </script>
+</body>
+</html>
